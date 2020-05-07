@@ -27,9 +27,21 @@ public class BalancedBrackets {
             if (ch == '[') {
                 brackets++;
             } else if (ch == ']') {
+                brackets--;}
+             else if (ch == '{') {
+                    brackets++;
+            }
+            else if (ch == '}') {
                 brackets--;
             }
+
         }
         return brackets == 0;
+
+    }
+
+    public static void main (String[] args) {
+    System.out.println(hasBalancedBrackets("[LaunchCode]"));
+    System.out.println(hasBalancedBrackets("[LaunchCode"));
     }
 }
